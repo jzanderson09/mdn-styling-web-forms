@@ -1,0 +1,124 @@
+@font-face {
+    font-family: 'handwriting';
+    font-style: normal;
+    font-weight: normal;
+    src: url('fonts/journal-webfont.woff2') format('woff2'),
+         url('fonts/journal-webfont.woff') format('woff');
+
+}
+
+@font-face {
+    font-family: 'typewriter';
+    font-style: normal;
+    font-weight: normal;
+    src: url('fonts/mom___-webfont.woff2') format('woff2'),
+         url('fonts/mom___-webfont.woff') format('woff');
+
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+    font-size: 1.6rem;
+}
+
+h1 {
+    align-self: end;
+    font:
+        1em "typewriter",
+        monospace;
+}
+
+body {
+    background: #222;
+    font: 1.3rem sans-serif;
+    margin: 0;
+    padding: 0.5em;
+}
+
+form {
+    background: #fff url(bg.jpg);
+    box-sizing: border-box;
+    height: 498px;
+    margin: 0 auto;
+    padding: 1em;
+    position: relative;
+    width: 740px;
+  
+    /* we create our grid */
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 10em 1em 1em 1em;
+}
+  
+#message {
+    grid-row: 1 / 5;
+}
+  
+#from,
+#reply {
+    display: flex;
+}
+
+label {
+    font:
+        0.8em "typewriter",
+        sans-serif;
+}
+
+input,
+textarea {
+    background: none;
+    border: none;
+    font:
+        1.4em/1.5em "handwriting",
+        cursive,
+        sans-serif;
+    margin: 0;
+    padding: 0 10px;
+    width: 80%;
+}
+
+input:focus,
+textarea:focus {
+    background: rgb(0 0 0 / 10%);
+    border-radius: 5px;
+}
+
+textarea {
+    border-right: 1px solid;
+    display: block;
+    height: 90%;
+    margin: 10px 0 0 -10px;
+    overflow: auto;
+    padding: 10px;
+    width: 100%;
+}
+
+button {
+    background: none;
+    border: 2px solid #333;
+    border-radius: 5px;
+    cursor: pointer;
+    font: bold 0.6em sans-serif;
+    margin: 5% auto;
+    padding: 5px;
+    transform: rotate(-1.5deg);
+}
+  
+button:after {
+    content: " >>>";
+}
+  
+button:hover,
+button:focus {
+    background: #000;
+    color: #fff;
+}  
